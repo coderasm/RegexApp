@@ -40,7 +40,7 @@ namespace RegexApp
       }
       Console.WriteLine();
       Console.WriteLine("####### Part C #######");
-      matcher.setExpression(@".*(?:[0][1-5]|[0][9]|[1][0-2])-\d\d-\d{4}");
+      matcher.setExpression(@".*\d(?:[0-5]|[9])-\d\d-\d{4}");
       matches = matcher.findMatches(toSearch);
       for (int i = 0; i < matches.Length; i++)
       {
