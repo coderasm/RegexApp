@@ -4,7 +4,12 @@ namespace RegexApp
 {
   class RegexMatches
   {
-    public Regex expression { get; set; } = new Regex(@".*\d[\d-[4]]-\d\d-\d\d");
+    private Regex expression = new Regex(@".*\d\d-\d\d-\d{4}");
+
+    public void setExpression(string expression)
+    {
+      this.expression = new Regex(expression);
+    }
 
     public string[] findMatches(string toSearch)
     {

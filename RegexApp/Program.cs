@@ -20,12 +20,29 @@ namespace RegexApp
         "Ursula's B-day: 07-28-2004\n" + "Virginia's B-day: 08-31-2005\n" +
         "Wendy's B-day: 09-30-2006\n";
       var matches = matcher.findMatches(toSearch);
-      for (int i = 0; i < 4; i++)
+      Console.WriteLine("######## Part A ########");
+      for (int i = 0; i < 5; i++)
       {
         Console.WriteLine(matches[i]);
       }
       Console.WriteLine("...  // Here are 11 other girls’ B-days.");
       for (int i = 16; i < 21; i++)
+      {
+        Console.WriteLine(matches[i]);
+      }
+      Console.WriteLine();
+      Console.WriteLine("######## Part B ########");
+      matcher.setExpression(@".*(?:199[5-9]|2\d{3})");
+      matches = matcher.findMatches(toSearch);
+      for (int i = 0; i < matches.Length; i++)
+      {
+        Console.WriteLine(matches[i]);
+      }
+      Console.WriteLine();
+      Console.WriteLine("####### Part C #######");
+      matcher.setExpression(@".*(?:[0][1-5]|[0][9]|[1][0-2])-\d\d-\d{4}");
+      matches = matcher.findMatches(toSearch);
+      for (int i = 0; i < matches.Length; i++)
       {
         Console.WriteLine(matches[i]);
       }
