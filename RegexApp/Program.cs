@@ -21,12 +21,7 @@ namespace RegexApp
         "Wendy's B-day: 09-30-2006\n";
       var matches = matcher.findMatches(toSearch);
       Console.WriteLine("######## Part A ########");
-      for (int i = 0; i < 5; i++)
-      {
-        Console.WriteLine(matches[i]);
-      }
-      Console.WriteLine("...  // Here are 11 other girls’ B-days.");
-      for (int i = 16; i < 21; i++)
+      for (int i = 0; i < matches.Length; i++)
       {
         Console.WriteLine(matches[i]);
       }
