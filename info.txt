@@ -1,0 +1,6 @@
+Print each birthday. The regular express matches against
+each line. It does not match the new line character.
+Print each birthday on or after 1995. Edit the regular
+expression to match for years on or after 1995, .*(?:199[5-9]|2\d{3}).
+Edit the regular expression to match for months not within
+Jun, July, August, .*\d(?:[0-5]|[9])-\d\d-\d{4}.
